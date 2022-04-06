@@ -8,8 +8,8 @@ using StatePark.Models;
 namespace StatePark.Migrations
 {
     [DbContext(typeof(StateParkContext))]
-    [Migration("20220406224053_AddSeedData")]
-    partial class AddSeedData
+    [Migration("20220406231641_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,6 +33,9 @@ namespace StatePark.Migrations
                     b.Property<string>("NearestCity")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<int>("RegionId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Type")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
@@ -46,7 +49,8 @@ namespace StatePark.Migrations
                             ParkId = 1,
                             Camping = true,
                             Name = "Goose Lake State Recreation Area",
-                            NearestCity = "Lakeview",
+                            NearestCity = "NearestCity",
+                            RegionId = 1,
                             Type = "Recreation Area"
                         },
                         new
@@ -54,7 +58,8 @@ namespace StatePark.Migrations
                             ParkId = 2,
                             Camping = false,
                             Name = "Frenchglen Hotel State Heritage Site",
-                            NearestCity = "Burns",
+                            NearestCity = "Lakeview",
+                            RegionId = 2,
                             Type = "Heritage Site"
                         },
                         new
@@ -62,7 +67,8 @@ namespace StatePark.Migrations
                             ParkId = 3,
                             Camping = false,
                             Name = "Ontario State Recreation Site",
-                            NearestCity = "Ontario",
+                            NearestCity = "Burns",
+                            RegionId = 2,
                             Type = "Recreation Site"
                         },
                         new
@@ -71,6 +77,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Farewell Bend State Recreation Area",
                             NearestCity = "Ontario",
+                            RegionId = 2,
                             Type = "Recreation Area"
                         },
                         new
@@ -78,7 +85,8 @@ namespace StatePark.Migrations
                             ParkId = 5,
                             Camping = false,
                             Name = "Kam Wah Chung State Heritage Site",
-                            NearestCity = "John Day",
+                            NearestCity = "Ontario",
+                            RegionId = 2,
                             Type = "Heritage Site"
                         },
                         new
@@ -87,6 +95,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Unity Forest State Scenic Corridor",
                             NearestCity = "John Day",
+                            RegionId = 2,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -95,6 +104,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Unity Lake State Recreation Site",
                             NearestCity = "John Day",
+                            RegionId = 2,
                             Type = "Recreation Site"
                         },
                         new
@@ -103,6 +113,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Clyde Holliday State Recreation Site",
                             NearestCity = "John Day",
+                            RegionId = 2,
                             Type = "Recreation Site"
                         },
                         new
@@ -110,7 +121,8 @@ namespace StatePark.Migrations
                             ParkId = 9,
                             Camping = true,
                             Name = "Succor Creek State Natural Area",
-                            NearestCity = "Nyssa",
+                            NearestCity = "John Day",
+                            RegionId = 2,
                             Type = "Natural Area"
                         },
                         new
@@ -119,6 +131,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Lake Owyhee State Park",
                             NearestCity = "Nyssa",
+                            RegionId = 2,
                             Type = "State Park"
                         },
                         new
@@ -126,7 +139,8 @@ namespace StatePark.Migrations
                             ParkId = 11,
                             Camping = true,
                             Name = "Catherine Creek State Park",
-                            NearestCity = "Union",
+                            NearestCity = "Nyssa",
+                            RegionId = 2,
                             Type = "State Park"
                         },
                         new
@@ -134,7 +148,8 @@ namespace StatePark.Migrations
                             ParkId = 12,
                             Camping = false,
                             Name = "Hat Rock State Park",
-                            NearestCity = "Umatilla",
+                            NearestCity = "Union",
+                            RegionId = 2,
                             Type = "State Park"
                         },
                         new
@@ -142,7 +157,8 @@ namespace StatePark.Migrations
                             ParkId = 13,
                             Camping = true,
                             Name = "Hilgard Junction State Recreation Area",
-                            NearestCity = "La Grande",
+                            NearestCity = "Umatilla",
+                            RegionId = 2,
                             Type = "Recreation Area"
                         },
                         new
@@ -151,6 +167,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Red Bridge State Wayside",
                             NearestCity = "La Grande",
+                            RegionId = 2,
                             Type = "Wayside"
                         },
                         new
@@ -158,7 +175,8 @@ namespace StatePark.Migrations
                             ParkId = 15,
                             Camping = true,
                             Name = "Ukiah–Dale Forest State Scenic Corridor",
-                            NearestCity = "Ukiah",
+                            NearestCity = "La Grande",
+                            RegionId = 2,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -166,7 +184,8 @@ namespace StatePark.Migrations
                             ParkId = 16,
                             Camping = true,
                             Name = "Emigrant Springs State Heritage Area",
-                            NearestCity = "Pendleton",
+                            NearestCity = "Ukiah",
+                            RegionId = 2,
                             Type = "Heritage Area"
                         },
                         new
@@ -174,7 +193,8 @@ namespace StatePark.Migrations
                             ParkId = 17,
                             Camping = false,
                             Name = "Wallowa Lake Highway Forest State Scenic Corridor",
-                            NearestCity = "Enterprise",
+                            NearestCity = "Pendleton",
+                            RegionId = 2,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -182,7 +202,8 @@ namespace StatePark.Migrations
                             ParkId = 18,
                             Camping = false,
                             Name = "Wallowa River Rest Area",
-                            NearestCity = "La Grande",
+                            NearestCity = "Enterprise",
+                            RegionId = 2,
                             Type = "Rest Area"
                         },
                         new
@@ -190,7 +211,8 @@ namespace StatePark.Migrations
                             ParkId = 19,
                             Camping = true,
                             Name = "Minam State Recreation Area",
-                            NearestCity = "Elgin",
+                            NearestCity = "La Grande",
+                            RegionId = 2,
                             Type = "Recreation Area"
                         },
                         new
@@ -198,7 +220,8 @@ namespace StatePark.Migrations
                             ParkId = 20,
                             Camping = true,
                             Name = "Wallowa Lake State Recreation Area",
-                            NearestCity = "Joseph",
+                            NearestCity = "Elgin",
+                            RegionId = 2,
                             Type = "Recreation Area"
                         },
                         new
@@ -207,6 +230,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Iwetemlaykin State Heritage Site",
                             NearestCity = "Joseph",
+                            RegionId = 2,
                             Type = "Heritage Site"
                         },
                         new
@@ -214,7 +238,8 @@ namespace StatePark.Migrations
                             ParkId = 22,
                             Camping = false,
                             Name = "Casey State Recreation Site",
-                            NearestCity = "Medford",
+                            NearestCity = "Joseph",
+                            RegionId = 1,
                             Type = "Recreation Site"
                         },
                         new
@@ -222,7 +247,8 @@ namespace StatePark.Migrations
                             ParkId = 23,
                             Camping = false,
                             Name = "Prospect State Scenic Viewpoint",
-                            NearestCity = "Prospect",
+                            NearestCity = "Medford",
+                            RegionId = 1,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -230,7 +256,8 @@ namespace StatePark.Migrations
                             ParkId = 24,
                             Camping = true,
                             Name = "Joseph H. Stewart State Recreation Area",
-                            NearestCity = "Medford",
+                            NearestCity = "Prospect",
+                            RegionId = 1,
                             Type = "Recreation Area"
                         },
                         new
@@ -238,7 +265,8 @@ namespace StatePark.Migrations
                             ParkId = 25,
                             Camping = true,
                             Name = "The Cove Palisades State Park",
-                            NearestCity = "Madras",
+                            NearestCity = "Medford",
+                            RegionId = 3,
                             Type = "State Park"
                         },
                         new
@@ -246,7 +274,8 @@ namespace StatePark.Migrations
                             ParkId = 26,
                             Camping = true,
                             Name = "Jasper Point Campground",
-                            NearestCity = "Prineville",
+                            NearestCity = "Madras",
+                            RegionId = 3,
                             Type = "Campground"
                         },
                         new
@@ -255,6 +284,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Prineville Reservoir State Park",
                             NearestCity = "Prineville",
+                            RegionId = 3,
                             Type = "State Park"
                         },
                         new
@@ -262,7 +292,8 @@ namespace StatePark.Migrations
                             ParkId = 28,
                             Camping = false,
                             Name = "Heritage Landing (Deschutes)",
-                            NearestCity = "The Dalles",
+                            NearestCity = "Prineville",
+                            RegionId = 4,
                             Type = "Boat Launch"
                         },
                         new
@@ -271,6 +302,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "White River Falls State Park",
                             NearestCity = "The Dalles",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -279,6 +311,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Deschutes River State Recreation Area",
                             NearestCity = "The Dalles",
+                            RegionId = 4,
                             Type = "Recreation Area"
                         },
                         new
@@ -286,7 +319,8 @@ namespace StatePark.Migrations
                             ParkId = 31,
                             Camping = false,
                             Name = "Cline Falls State Scenic Viewpoint",
-                            NearestCity = "Redmond",
+                            NearestCity = "The Dalles",
+                            RegionId = 3,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -294,7 +328,8 @@ namespace StatePark.Migrations
                             ParkId = 32,
                             Camping = true,
                             Name = "Fort Rock State Natural Area",
-                            NearestCity = "Fort Rock",
+                            NearestCity = "Redmond",
+                            RegionId = 3,
                             Type = "Natural Area"
                         },
                         new
@@ -302,7 +337,8 @@ namespace StatePark.Migrations
                             ParkId = 33,
                             Camping = true,
                             Name = "La Pine State Park",
-                            NearestCity = "La Pine",
+                            NearestCity = "Fort Rock",
+                            RegionId = 3,
                             Type = "State Park"
                         },
                         new
@@ -310,7 +346,8 @@ namespace StatePark.Migrations
                             ParkId = 34,
                             Camping = false,
                             Name = "Pilot Butte State Scenic Viewpoint",
-                            NearestCity = "Bend",
+                            NearestCity = "La Pine",
+                            RegionId = 3,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -319,6 +356,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Tumalo State Park",
                             NearestCity = "Bend",
+                            RegionId = 3,
                             Type = "State Park"
                         },
                         new
@@ -326,7 +364,8 @@ namespace StatePark.Migrations
                             ParkId = 36,
                             Camping = false,
                             Name = "Peter Skene Ogden State Scenic Viewpoint",
-                            NearestCity = "Redmond",
+                            NearestCity = "Bend",
+                            RegionId = 3,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -335,6 +374,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Smith Rock State Park",
                             NearestCity = "Redmond",
+                            RegionId = 3,
                             Type = "State Park"
                         },
                         new
@@ -342,7 +382,8 @@ namespace StatePark.Migrations
                             ParkId = 38,
                             Camping = false,
                             Name = "Booth State Scenic Corridor",
-                            NearestCity = "Lakeview",
+                            NearestCity = "Redmond",
+                            RegionId = 1,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -351,6 +392,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Chandler State Wayside",
                             NearestCity = "Lakeview",
+                            RegionId = 1,
                             Type = "Wayside"
                         },
                         new
@@ -358,7 +400,8 @@ namespace StatePark.Migrations
                             ParkId = 40,
                             Camping = false,
                             Name = "Geisel Monument State Heritage Site",
-                            NearestCity = "Gold Beach",
+                            NearestCity = "Lakeview",
+                            RegionId = 5,
                             Type = "Heritage Site"
                         },
                         new
@@ -366,7 +409,8 @@ namespace StatePark.Migrations
                             ParkId = 41,
                             Camping = true,
                             Name = "Humbug Mountain State Park",
-                            NearestCity = "Port Orford",
+                            NearestCity = "Gold Beach",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -374,7 +418,8 @@ namespace StatePark.Migrations
                             ParkId = 42,
                             Camping = false,
                             Name = "Otter Point State Recreation Site",
-                            NearestCity = "Gold Beach",
+                            NearestCity = "Port Orford",
+                            RegionId = 5,
                             Type = "Recreation Site"
                         },
                         new
@@ -382,7 +427,8 @@ namespace StatePark.Migrations
                             ParkId = 43,
                             Camping = false,
                             Name = "Paradise Point State Recreation Site",
-                            NearestCity = "Port Orford",
+                            NearestCity = "Gold Beach",
+                            RegionId = 5,
                             Type = "Recreation Site"
                         },
                         new
@@ -391,6 +437,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Port Orford Heads State Park",
                             NearestCity = "Port Orford",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -399,6 +446,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Cape Blanco State Park",
                             NearestCity = "Port Orford",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -406,7 +454,8 @@ namespace StatePark.Migrations
                             ParkId = 46,
                             Camping = false,
                             Name = "Bandon State Natural Area",
-                            NearestCity = "Bandon",
+                            NearestCity = "Port Orford",
+                            RegionId = 5,
                             Type = "Natural Area"
                         },
                         new
@@ -414,7 +463,8 @@ namespace StatePark.Migrations
                             ParkId = 47,
                             Camping = false,
                             Name = "Coquille Myrtle Grove State Natural Site",
-                            NearestCity = "Myrtle Point",
+                            NearestCity = "Bandon",
+                            RegionId = 5,
                             Type = "Natural Site"
                         },
                         new
@@ -422,7 +472,8 @@ namespace StatePark.Migrations
                             ParkId = 48,
                             Camping = false,
                             Name = "Face Rock State Scenic Viewpoint",
-                            NearestCity = "Bandon",
+                            NearestCity = "Myrtle Point",
+                            RegionId = 5,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -430,7 +481,8 @@ namespace StatePark.Migrations
                             ParkId = 49,
                             Camping = false,
                             Name = "Hoffman Memorial State Wayside",
-                            NearestCity = "Myrtle Point",
+                            NearestCity = "Bandon",
+                            RegionId = 5,
                             Type = "Wayside"
                         },
                         new
@@ -438,7 +490,8 @@ namespace StatePark.Migrations
                             ParkId = 50,
                             Camping = false,
                             Name = "Seven Devils State Recreation Site",
-                            NearestCity = "Bandon",
+                            NearestCity = "Myrtle Point",
+                            RegionId = 5,
                             Type = "Recreation Site"
                         },
                         new
@@ -447,6 +500,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Bullards Beach State Park",
                             NearestCity = "Bandon",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -454,7 +508,8 @@ namespace StatePark.Migrations
                             ParkId = 52,
                             Camping = true,
                             Name = "Alfred A. Loeb State Park",
-                            NearestCity = "Brookings",
+                            NearestCity = "Bandon",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -462,7 +517,8 @@ namespace StatePark.Migrations
                             ParkId = 53,
                             Camping = false,
                             Name = "Cape Sebastian State Scenic Corridor",
-                            NearestCity = "Gold Beach",
+                            NearestCity = "Brookings",
+                            RegionId = 5,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -470,7 +526,8 @@ namespace StatePark.Migrations
                             ParkId = 54,
                             Camping = false,
                             Name = "Crissey Field State Recreation Site",
-                            NearestCity = "Brookings",
+                            NearestCity = "Gold Beach",
+                            RegionId = 5,
                             Type = "Recreation Site"
                         },
                         new
@@ -479,6 +536,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "McVay Rock State Recreation Site",
                             NearestCity = "Brookings",
+                            RegionId = 5,
                             Type = "Recreation Site"
                         },
                         new
@@ -486,7 +544,8 @@ namespace StatePark.Migrations
                             ParkId = 56,
                             Camping = false,
                             Name = "Pistol River State Scenic Viewpoint",
-                            NearestCity = "Gold Beach",
+                            NearestCity = "Brookings",
+                            RegionId = 5,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -494,7 +553,8 @@ namespace StatePark.Migrations
                             ParkId = 57,
                             Camping = false,
                             Name = "Samuel H. Boardman State Scenic Corridor",
-                            NearestCity = "Brookings",
+                            NearestCity = "Gold Beach",
+                            RegionId = 5,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -503,6 +563,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Winchuck State Recreation Site",
                             NearestCity = "Brookings",
+                            RegionId = 5,
                             Type = "Recreation Site"
                         },
                         new
@@ -511,6 +572,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Harris Beach State Recreation Area",
                             NearestCity = "Brookings",
+                            RegionId = 5,
                             Type = "Recreation Area"
                         },
                         new
@@ -518,7 +580,8 @@ namespace StatePark.Migrations
                             ParkId = 60,
                             Camping = false,
                             Name = "Alderwood State Wayside",
-                            NearestCity = "Junction City",
+                            NearestCity = "Brookings",
+                            RegionId = 6,
                             Type = "Wayside"
                         },
                         new
@@ -526,7 +589,8 @@ namespace StatePark.Migrations
                             ParkId = 61,
                             Camping = false,
                             Name = "Elijah Bristow State Park",
-                            NearestCity = "Eugene",
+                            NearestCity = "Junction City",
+                            RegionId = 6,
                             Type = "State Park"
                         },
                         new
@@ -534,7 +598,8 @@ namespace StatePark.Migrations
                             ParkId = 62,
                             Camping = false,
                             Name = "Washburne State Wayside",
-                            NearestCity = "Junction City",
+                            NearestCity = "Eugene",
+                            RegionId = 6,
                             Type = "Wayside"
                         },
                         new
@@ -542,7 +607,8 @@ namespace StatePark.Migrations
                             ParkId = 63,
                             Camping = false,
                             Name = "Mongold Day-Use Area",
-                            NearestCity = "Detroit",
+                            NearestCity = "Junction City",
+                            RegionId = 6,
                             Type = "Boat Launch"
                         },
                         new
@@ -550,7 +616,8 @@ namespace StatePark.Migrations
                             ParkId = 64,
                             Camping = false,
                             Name = "North Santiam State Recreation Area",
-                            NearestCity = "Mill City",
+                            NearestCity = "Detroit",
+                            RegionId = 6,
                             Type = "Recreation Area"
                         },
                         new
@@ -558,7 +625,8 @@ namespace StatePark.Migrations
                             ParkId = 65,
                             Camping = true,
                             Name = "Detroit Lake State Recreation Area",
-                            NearestCity = "Detroit",
+                            NearestCity = "Mill City",
+                            RegionId = 6,
                             Type = "Recreation Area"
                         },
                         new
@@ -566,7 +634,8 @@ namespace StatePark.Migrations
                             ParkId = 66,
                             Camping = false,
                             Name = "Cape Arago State Park",
-                            NearestCity = "Coos Bay",
+                            NearestCity = "Detroit",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -575,6 +644,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Golden and Silver Falls State Natural Area",
                             NearestCity = "Coos Bay",
+                            RegionId = 5,
                             Type = "Natural Area"
                         },
                         new
@@ -583,6 +653,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Shore Acres State Park",
                             NearestCity = "Coos Bay",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -590,7 +661,8 @@ namespace StatePark.Migrations
                             ParkId = 69,
                             Camping = true,
                             Name = "William M. Tugman State Park",
-                            NearestCity = "Reedsport",
+                            NearestCity = "Coos Bay",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -598,7 +670,8 @@ namespace StatePark.Migrations
                             ParkId = 70,
                             Camping = true,
                             Name = "Sunset Bay State Park",
-                            NearestCity = "Coos Bay",
+                            NearestCity = "Reedsport",
+                            RegionId = 5,
                             Type = "State Park"
                         },
                         new
@@ -606,7 +679,8 @@ namespace StatePark.Migrations
                             ParkId = 71,
                             Camping = false,
                             Name = "Illinois River Forks State Park",
-                            NearestCity = "Cave Junction",
+                            NearestCity = "Coos Bay",
+                            RegionId = 1,
                             Type = "State Park"
                         },
                         new
@@ -614,7 +688,8 @@ namespace StatePark.Migrations
                             ParkId = 72,
                             Camping = false,
                             Name = "TouVelle State Recreation Site",
-                            NearestCity = "Medford",
+                            NearestCity = "Cave Junction",
+                            RegionId = 1,
                             Type = "Recreation Site"
                         },
                         new
@@ -622,7 +697,8 @@ namespace StatePark.Migrations
                             ParkId = 73,
                             Camping = false,
                             Name = "Tub Springs State Wayside",
-                            NearestCity = "Ashland",
+                            NearestCity = "Medford",
+                            RegionId = 1,
                             Type = "Wayside"
                         },
                         new
@@ -630,7 +706,8 @@ namespace StatePark.Migrations
                             ParkId = 74,
                             Camping = false,
                             Name = "Wolf Creek Inn State Heritage Site",
-                            NearestCity = "Grants Pass",
+                            NearestCity = "Ashland",
+                            RegionId = 1,
                             Type = "Heritage Site"
                         },
                         new
@@ -639,6 +716,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Valley of the Rogue State Recreation Area",
                             NearestCity = "Grants Pass",
+                            RegionId = 1,
                             Type = "Recreation Area"
                         },
                         new
@@ -646,7 +724,8 @@ namespace StatePark.Migrations
                             ParkId = 76,
                             Camping = false,
                             Name = "Bald Peak State Scenic Viewpoint",
-                            NearestCity = "Newberg",
+                            NearestCity = "Grants Pass",
+                            RegionId = 4,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -654,7 +733,8 @@ namespace StatePark.Migrations
                             ParkId = 77,
                             Camping = false,
                             Name = "Molalla River State Park",
-                            NearestCity = "Canby",
+                            NearestCity = "Newberg",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -662,7 +742,8 @@ namespace StatePark.Migrations
                             ParkId = 78,
                             Camping = true,
                             Name = "Champoeg State Heritage Area",
-                            NearestCity = "Newberg",
+                            NearestCity = "Canby",
+                            RegionId = 6,
                             Type = "Heritage Area"
                         },
                         new
@@ -670,7 +751,8 @@ namespace StatePark.Migrations
                             ParkId = 79,
                             Camping = false,
                             Name = "Beaver Creek State Natural Area",
-                            NearestCity = "Newport",
+                            NearestCity = "Newberg",
+                            RegionId = 7,
                             Type = "State Park"
                         },
                         new
@@ -678,7 +760,8 @@ namespace StatePark.Migrations
                             ParkId = 80,
                             Camping = false,
                             Name = "Bolon Island Tideways State Scenic Corridor",
-                            NearestCity = "Reedsport",
+                            NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -686,7 +769,8 @@ namespace StatePark.Migrations
                             ParkId = 81,
                             Camping = false,
                             Name = "Darlingtonia State Natural Site",
-                            NearestCity = "Florence",
+                            NearestCity = "Reedsport",
+                            RegionId = 7,
                             Type = "Natural Site"
                         },
                         new
@@ -694,7 +778,8 @@ namespace StatePark.Migrations
                             ParkId = 82,
                             Camping = false,
                             Name = "Governor Patterson Memorial State Recreation Site",
-                            NearestCity = "Waldport",
+                            NearestCity = "Florence",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -702,7 +787,8 @@ namespace StatePark.Migrations
                             ParkId = 83,
                             Camping = true,
                             Name = "Umpqua Lighthouse State Park",
-                            NearestCity = "Reedsport",
+                            NearestCity = "Waldport",
+                            RegionId = 7,
                             Type = "State Park"
                         },
                         new
@@ -710,7 +796,8 @@ namespace StatePark.Migrations
                             ParkId = 84,
                             Camping = true,
                             Name = "Beachside State Recreation Site",
-                            NearestCity = "Waldport",
+                            NearestCity = "Reedsport",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -718,7 +805,8 @@ namespace StatePark.Migrations
                             ParkId = 85,
                             Camping = true,
                             Name = "Carl G. Washburne Memorial State Park",
-                            NearestCity = "Florence",
+                            NearestCity = "Waldport",
+                            RegionId = 7,
                             Type = "State Park"
                         },
                         new
@@ -727,6 +815,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Heceta Head Lighthouse State Scenic Viewpoint",
                             NearestCity = "Florence",
+                            RegionId = 7,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -735,6 +824,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Muriel O. Ponsler Memorial State Scenic Viewpoint",
                             NearestCity = "Florence",
+                            RegionId = 7,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -742,7 +832,8 @@ namespace StatePark.Migrations
                             ParkId = 88,
                             Camping = false,
                             Name = "Neptune State Scenic Viewpoint",
-                            NearestCity = "Yachats",
+                            NearestCity = "Florence",
+                            RegionId = 7,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -751,6 +842,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Smelt Sands State Recreation Site",
                             NearestCity = "Yachats",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -758,7 +850,8 @@ namespace StatePark.Migrations
                             ParkId = 90,
                             Camping = false,
                             Name = "Tokatee Klootchman State Natural Site",
-                            NearestCity = "Florence",
+                            NearestCity = "Yachats",
+                            RegionId = 7,
                             Type = "Natural Site"
                         },
                         new
@@ -766,7 +859,8 @@ namespace StatePark.Migrations
                             ParkId = 91,
                             Camping = false,
                             Name = "Stonefield Beach State Recreation Site",
-                            NearestCity = "Yachats",
+                            NearestCity = "Florence",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -774,7 +868,8 @@ namespace StatePark.Migrations
                             ParkId = 92,
                             Camping = false,
                             Name = "W. B. Nelson State Recreation Site",
-                            NearestCity = "Waldport",
+                            NearestCity = "Yachats",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -782,7 +877,8 @@ namespace StatePark.Migrations
                             ParkId = 93,
                             Camping = false,
                             Name = "Yachats Ocean Road State Natural Site",
-                            NearestCity = "Yachats",
+                            NearestCity = "Waldport",
+                            RegionId = 7,
                             Type = "Natural Site"
                         },
                         new
@@ -791,6 +887,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Yachats State Recreation Area",
                             NearestCity = "Yachats",
+                            RegionId = 7,
                             Type = "Recreation Area"
                         },
                         new
@@ -798,7 +895,8 @@ namespace StatePark.Migrations
                             ParkId = 95,
                             Camping = true,
                             Name = "Jessie M. Honeyman Memorial State Park",
-                            NearestCity = "Florence",
+                            NearestCity = "Yachats",
+                            RegionId = 7,
                             Type = "State Park"
                         },
                         new
@@ -806,7 +904,8 @@ namespace StatePark.Migrations
                             ParkId = 96,
                             Camping = false,
                             Name = "Erratic Rock State Natural Site",
-                            NearestCity = "Sheridan",
+                            NearestCity = "Florence",
+                            RegionId = 6,
                             Type = "Natural Site"
                         },
                         new
@@ -814,7 +913,8 @@ namespace StatePark.Migrations
                             ParkId = 97,
                             Camping = false,
                             Name = "Holman State Wayside",
-                            NearestCity = "Salem",
+                            NearestCity = "Sheridan",
+                            RegionId = 6,
                             Type = "Wayside"
                         },
                         new
@@ -823,6 +923,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Maud Williamson State Recreation Site",
                             NearestCity = "Salem",
+                            RegionId = 6,
                             Type = "Recreation Site"
                         },
                         new
@@ -830,7 +931,8 @@ namespace StatePark.Migrations
                             ParkId = 99,
                             Camping = false,
                             Name = "Sarah Helmick State Recreation Site",
-                            NearestCity = "Monmouth",
+                            NearestCity = "Salem",
+                            RegionId = 6,
                             Type = "Recreation Site"
                         },
                         new
@@ -838,7 +940,8 @@ namespace StatePark.Migrations
                             ParkId = 100,
                             Camping = false,
                             Name = "Willamette Mission State Park",
-                            NearestCity = "Salem",
+                            NearestCity = "Monmouth",
+                            RegionId = 6,
                             Type = "State Park"
                         },
                         new
@@ -846,7 +949,8 @@ namespace StatePark.Migrations
                             ParkId = 101,
                             Camping = false,
                             Name = "Bonnie Lure State Recreation Area",
-                            NearestCity = "Estacada",
+                            NearestCity = "Salem",
+                            RegionId = 4,
                             Type = "Recreation Area"
                         },
                         new
@@ -854,7 +958,8 @@ namespace StatePark.Migrations
                             ParkId = 102,
                             Camping = false,
                             Name = "Mary S. Young State Recreation Area",
-                            NearestCity = "West Linn",
+                            NearestCity = "Estacada",
+                            RegionId = 4,
                             Type = "Recreation Area"
                         },
                         new
@@ -862,7 +967,8 @@ namespace StatePark.Migrations
                             ParkId = 103,
                             Camping = true,
                             Name = "Milo McIver State Park",
-                            NearestCity = "Estacada",
+                            NearestCity = "West Linn",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -870,7 +976,8 @@ namespace StatePark.Migrations
                             ParkId = 104,
                             Camping = false,
                             Name = "Tryon Creek State Natural Area",
-                            NearestCity = "Portland",
+                            NearestCity = "Estacada",
+                            RegionId = 4,
                             Type = "Natural Area"
                         },
                         new
@@ -878,7 +985,8 @@ namespace StatePark.Migrations
                             ParkId = 105,
                             Camping = false,
                             Name = "Banks–Vernonia State Trail",
-                            NearestCity = "Vernonia",
+                            NearestCity = "Portland",
+                            RegionId = 4,
                             Type = "State Trail"
                         },
                         new
@@ -886,7 +994,8 @@ namespace StatePark.Migrations
                             ParkId = 106,
                             Camping = true,
                             Name = "Ainsworth State Park",
-                            NearestCity = "Multnomah Falls",
+                            NearestCity = "Vernonia",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -895,6 +1004,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Benson State Recreation Area",
                             NearestCity = "Multnomah Falls",
+                            RegionId = 4,
                             Type = "Recreation Area"
                         },
                         new
@@ -903,6 +1013,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Bridal Veil Falls State Scenic Viewpoint",
                             NearestCity = "Multnomah Falls",
+                            RegionId = 4,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -910,7 +1021,8 @@ namespace StatePark.Migrations
                             ParkId = 109,
                             Camping = false,
                             Name = "Crown Point State Scenic Corridor",
-                            NearestCity = "Troutdale",
+                            NearestCity = "Multnomah Falls",
+                            RegionId = 4,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -919,6 +1031,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Dabney State Recreation Area",
                             NearestCity = "Troutdale",
+                            RegionId = 4,
                             Type = "Recreation Area"
                         },
                         new
@@ -927,6 +1040,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "George W. Joseph State Natural Area (accessible from Guy W. Talbot State Park)",
                             NearestCity = "Troutdale",
+                            RegionId = 4,
                             Type = "Natural Area"
                         },
                         new
@@ -935,6 +1049,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Guy W. Talbot State Park",
                             NearestCity = "Troutdale",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -942,7 +1057,8 @@ namespace StatePark.Migrations
                             ParkId = 113,
                             Camping = false,
                             Name = "Historic Columbia River Highway State Trail",
-                            NearestCity = "Cascade Locks",
+                            NearestCity = "Troutdale",
+                            RegionId = 4,
                             Type = "State Trail"
                         },
                         new
@@ -951,6 +1067,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "John B. Yeon State Scenic Corridor",
                             NearestCity = "Cascade Locks",
+                            RegionId = 4,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -958,7 +1075,8 @@ namespace StatePark.Migrations
                             ParkId = 115,
                             Camping = false,
                             Name = "Koberg Beach State Recreation Site",
-                            NearestCity = "Hood River",
+                            NearestCity = "Cascade Locks",
+                            RegionId = 4,
                             Type = "Recreation Site"
                         },
                         new
@@ -966,7 +1084,8 @@ namespace StatePark.Migrations
                             ParkId = 116,
                             Camping = false,
                             Name = "Lewis and Clark State Recreation Site",
-                            NearestCity = "Troutdale",
+                            NearestCity = "Hood River",
+                            RegionId = 4,
                             Type = "Recreation Site"
                         },
                         new
@@ -974,7 +1093,8 @@ namespace StatePark.Migrations
                             ParkId = 117,
                             Camping = false,
                             Name = "Mayer State Park",
-                            NearestCity = "The Dalles",
+                            NearestCity = "Troutdale",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -983,6 +1103,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Memaloose State Park",
                             NearestCity = "The Dalles",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -990,7 +1111,8 @@ namespace StatePark.Migrations
                             ParkId = 119,
                             Camping = false,
                             Name = "Portland Women's Forum State Scenic Viewpoint",
-                            NearestCity = "Troutdale",
+                            NearestCity = "The Dalles",
+                            RegionId = 4,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -998,7 +1120,8 @@ namespace StatePark.Migrations
                             ParkId = 120,
                             Camping = false,
                             Name = "Seneca Fouts Memorial State Natural Area",
-                            NearestCity = "Hood River",
+                            NearestCity = "Troutdale",
+                            RegionId = 4,
                             Type = "Natural Area"
                         },
                         new
@@ -1006,7 +1129,8 @@ namespace StatePark.Migrations
                             ParkId = 121,
                             Camping = false,
                             Name = "Shepperd's Dell State Natural Area",
-                            NearestCity = "Multnomah Falls",
+                            NearestCity = "Hood River",
+                            RegionId = 4,
                             Type = "Natural Area"
                         },
                         new
@@ -1014,7 +1138,8 @@ namespace StatePark.Migrations
                             ParkId = 122,
                             Camping = false,
                             Name = "Sheridan State Scenic Corridor",
-                            NearestCity = "Cascade Locks",
+                            NearestCity = "Multnomah Falls",
+                            RegionId = 4,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -1022,7 +1147,8 @@ namespace StatePark.Migrations
                             ParkId = 123,
                             Camping = false,
                             Name = "Starvation Creek State Park",
-                            NearestCity = "Hood River",
+                            NearestCity = "Cascade Locks",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -1031,6 +1157,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Viento State Park",
                             NearestCity = "Hood River",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -1039,6 +1166,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Vinzenz Lausmann Memorial State Natural Area",
                             NearestCity = "Hood River",
+                            RegionId = 4,
                             Type = "Natural Area"
                         },
                         new
@@ -1047,6 +1175,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Wygant State Natural Area",
                             NearestCity = "Hood River",
+                            RegionId = 4,
                             Type = "Natural Area"
                         },
                         new
@@ -1054,7 +1183,8 @@ namespace StatePark.Migrations
                             ParkId = 127,
                             Camping = false,
                             Name = "Rooster Rock State Park",
-                            NearestCity = "Multnomah Falls",
+                            NearestCity = "Hood River",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -1062,7 +1192,8 @@ namespace StatePark.Migrations
                             ParkId = 128,
                             Camping = false,
                             Name = "Bradley State Scenic Viewpoint",
-                            NearestCity = "Astoria",
+                            NearestCity = "Multnomah Falls",
+                            RegionId = 8,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -1070,7 +1201,8 @@ namespace StatePark.Migrations
                             ParkId = 129,
                             Camping = false,
                             Name = "Del Rey Beach State Recreation Site",
-                            NearestCity = "Gearhart",
+                            NearestCity = "Astoria",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1078,7 +1210,8 @@ namespace StatePark.Migrations
                             ParkId = 130,
                             Camping = true,
                             Name = "Fort Stevens State Park",
-                            NearestCity = "Astoria",
+                            NearestCity = "Gearhart",
+                            RegionId = 8,
                             Type = "State Park"
                         },
                         new
@@ -1086,7 +1219,8 @@ namespace StatePark.Migrations
                             ParkId = 131,
                             Camping = false,
                             Name = "Cape Kiwanda State Natural Area",
-                            NearestCity = "Pacific City",
+                            NearestCity = "Astoria",
+                            RegionId = 8,
                             Type = "Natural Area"
                         },
                         new
@@ -1094,7 +1228,8 @@ namespace StatePark.Migrations
                             ParkId = 132,
                             Camping = false,
                             Name = "Cape Meares State Scenic Viewpoint",
-                            NearestCity = "Tillamook",
+                            NearestCity = "Pacific City",
+                            RegionId = 8,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -1103,6 +1238,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Oceanside Beach State Recreation Site",
                             NearestCity = "Tillamook",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1110,7 +1246,8 @@ namespace StatePark.Migrations
                             ParkId = 134,
                             Camping = false,
                             Name = "Bob Straub State Park",
-                            NearestCity = "Pacific City",
+                            NearestCity = "Tillamook",
+                            RegionId = 8,
                             Type = "State Park"
                         },
                         new
@@ -1118,7 +1255,8 @@ namespace StatePark.Migrations
                             ParkId = 135,
                             Camping = true,
                             Name = "Cape Lookout State Park",
-                            NearestCity = "Tillamook",
+                            NearestCity = "Pacific City",
+                            RegionId = 8,
                             Type = "State Park"
                         },
                         new
@@ -1126,7 +1264,8 @@ namespace StatePark.Migrations
                             ParkId = 136,
                             Camping = false,
                             Name = "Arcadia Beach State Recreation Site",
-                            NearestCity = "Cannon Beach",
+                            NearestCity = "Tillamook",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1135,6 +1274,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Ecola State Park",
                             NearestCity = "Cannon Beach",
+                            RegionId = 8,
                             Type = "State Park"
                         },
                         new
@@ -1142,7 +1282,8 @@ namespace StatePark.Migrations
                             ParkId = 138,
                             Camping = false,
                             Name = "Golden State Heritage Site",
-                            NearestCity = "Grants Pass",
+                            NearestCity = "Cannon Beach",
+                            RegionId = 1,
                             Type = "Heritage Site"
                         },
                         new
@@ -1150,7 +1291,8 @@ namespace StatePark.Migrations
                             ParkId = 139,
                             Camping = false,
                             Name = "Hug Point State Recreation Site",
-                            NearestCity = "Cannon Beach",
+                            NearestCity = "Grants Pass",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1158,7 +1300,8 @@ namespace StatePark.Migrations
                             ParkId = 140,
                             Camping = false,
                             Name = "Manhattan Beach State Recreation Site",
-                            NearestCity = "Rockaway Beach",
+                            NearestCity = "Cannon Beach",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1166,7 +1309,8 @@ namespace StatePark.Migrations
                             ParkId = 141,
                             Camping = false,
                             Name = "Oswald West State Park",
-                            NearestCity = "Cannon Beach",
+                            NearestCity = "Rockaway Beach",
+                            RegionId = 8,
                             Type = "State Park"
                         },
                         new
@@ -1174,7 +1318,8 @@ namespace StatePark.Migrations
                             ParkId = 142,
                             Camping = true,
                             Name = "Saddle Mountain State Natural Area",
-                            NearestCity = "Seaside",
+                            NearestCity = "Cannon Beach",
+                            RegionId = 8,
                             Type = "Natural Area"
                         },
                         new
@@ -1182,7 +1327,8 @@ namespace StatePark.Migrations
                             ParkId = 143,
                             Camping = false,
                             Name = "Tolovana Beach State Recreation Site",
-                            NearestCity = "Cannon Beach",
+                            NearestCity = "Seaside",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1190,7 +1336,8 @@ namespace StatePark.Migrations
                             ParkId = 144,
                             Camping = true,
                             Name = "Nehalem Bay State Park",
-                            NearestCity = "Manzanita",
+                            NearestCity = "Cannon Beach",
+                            RegionId = 8,
                             Type = "State Park"
                         },
                         new
@@ -1198,7 +1345,8 @@ namespace StatePark.Migrations
                             ParkId = 145,
                             Camping = false,
                             Name = "Alsea Bay Historic Interpretive Center",
-                            NearestCity = "Waldport",
+                            NearestCity = "Manzanita",
+                            RegionId = 7,
                             Type = "Interpretive Center"
                         },
                         new
@@ -1207,6 +1355,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Driftwood Beach State Recreation Site",
                             NearestCity = "Waldport",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -1214,7 +1363,8 @@ namespace StatePark.Migrations
                             ParkId = 147,
                             Camping = false,
                             Name = "Lost Creek State Recreation Site",
-                            NearestCity = "Newport",
+                            NearestCity = "Waldport",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -1223,6 +1373,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Ona Beach State Park",
                             NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "State Park"
                         },
                         new
@@ -1231,6 +1382,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Seal Rock State Recreation Site",
                             NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -1239,6 +1391,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Yaquina Bay State Recreation Site",
                             NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -1247,6 +1400,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "South Beach State Park",
                             NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "State Park"
                         },
                         new
@@ -1254,7 +1408,8 @@ namespace StatePark.Migrations
                             ParkId = 152,
                             Camping = true,
                             Name = "Cascadia State Park",
-                            NearestCity = "Sweet Home",
+                            NearestCity = "Newport",
+                            RegionId = 6,
                             Type = "State Park"
                         },
                         new
@@ -1262,7 +1417,8 @@ namespace StatePark.Migrations
                             ParkId = 153,
                             Camping = true,
                             Name = "Silver Falls State Park",
-                            NearestCity = "Silverton",
+                            NearestCity = "Sweet Home",
+                            RegionId = 6,
                             Type = "State Park"
                         },
                         new
@@ -1270,7 +1426,8 @@ namespace StatePark.Migrations
                             ParkId = 154,
                             Camping = false,
                             Name = "Agate Beach State Recreation Site",
-                            NearestCity = "Newport",
+                            NearestCity = "Silverton",
+                            RegionId = 7,
                             Type = "Recreation Site"
                         },
                         new
@@ -1278,7 +1435,8 @@ namespace StatePark.Migrations
                             ParkId = 155,
                             Camping = false,
                             Name = "Boiler Bay State Scenic Viewpoint",
-                            NearestCity = "Depoe Bay",
+                            NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -1286,7 +1444,8 @@ namespace StatePark.Migrations
                             ParkId = 156,
                             Camping = false,
                             Name = "D River State Recreation Site",
-                            NearestCity = "Lincoln City",
+                            NearestCity = "Depoe Bay",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1295,6 +1454,7 @@ namespace StatePark.Migrations
                             Camping = true,
                             Name = "Devils Lake State Recreation Area",
                             NearestCity = "Lincoln City",
+                            RegionId = 8,
                             Type = "Recreation Area"
                         },
                         new
@@ -1302,7 +1462,8 @@ namespace StatePark.Migrations
                             ParkId = 158,
                             Camping = false,
                             Name = "Devils Punch Bowl State Natural Area",
-                            NearestCity = "Newport",
+                            NearestCity = "Lincoln City",
+                            RegionId = 7,
                             Type = "Natural Area"
                         },
                         new
@@ -1311,6 +1472,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Ellmaker State Wayside",
                             NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "Wayside"
                         },
                         new
@@ -1318,7 +1480,8 @@ namespace StatePark.Migrations
                             ParkId = 160,
                             Camping = false,
                             Name = "Fogarty Creek State Recreation Area",
-                            NearestCity = "Depoe Bay",
+                            NearestCity = "Newport",
+                            RegionId = 7,
                             Type = "Recreation Area"
                         },
                         new
@@ -1326,7 +1489,8 @@ namespace StatePark.Migrations
                             ParkId = 161,
                             Camping = false,
                             Name = "Gleneden Beach State Recreation Site",
-                            NearestCity = "Lincoln City",
+                            NearestCity = "Depoe Bay",
+                            RegionId = 7,
                             Type = "Recreation Area"
                         },
                         new
@@ -1335,6 +1499,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "H. B. Van Duzer Forest State Scenic Corridor",
                             NearestCity = "Lincoln City",
+                            RegionId = 8,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -1342,7 +1507,8 @@ namespace StatePark.Migrations
                             ParkId = 163,
                             Camping = false,
                             Name = "Neskowin Beach State Recreation Site",
-                            NearestCity = "Neskowin",
+                            NearestCity = "Lincoln City",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1350,7 +1516,8 @@ namespace StatePark.Migrations
                             ParkId = 164,
                             Camping = false,
                             Name = "Otter Crest State Scenic Viewpoint",
-                            NearestCity = "Newport",
+                            NearestCity = "Neskowin",
+                            RegionId = 7,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -1358,7 +1525,8 @@ namespace StatePark.Migrations
                             ParkId = 165,
                             Camping = false,
                             Name = "Roads End State Recreation Site",
-                            NearestCity = "Lincoln City",
+                            NearestCity = "Newport",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1366,7 +1534,8 @@ namespace StatePark.Migrations
                             ParkId = 166,
                             Camping = true,
                             Name = "Beverly Beach State Park",
-                            NearestCity = "Newport",
+                            NearestCity = "Lincoln City",
+                            RegionId = 7,
                             Type = "State Park"
                         },
                         new
@@ -1374,7 +1543,8 @@ namespace StatePark.Migrations
                             ParkId = 167,
                             Camping = true,
                             Name = "Collier Memorial State Park",
-                            NearestCity = "Klamath Falls",
+                            NearestCity = "Newport",
+                            RegionId = 1,
                             Type = "State Park"
                         },
                         new
@@ -1382,7 +1552,8 @@ namespace StatePark.Migrations
                             ParkId = 168,
                             Camping = true,
                             Name = "Jackson F. Kimball State Recreation Site",
-                            NearestCity = "Fort Klamath",
+                            NearestCity = "Klamath Falls",
+                            RegionId = 1,
                             Type = "Recreation Site"
                         },
                         new
@@ -1390,7 +1561,8 @@ namespace StatePark.Migrations
                             ParkId = 169,
                             Camping = false,
                             Name = "OC&E Woods Line State Trail",
-                            NearestCity = "Klamath Falls",
+                            NearestCity = "Fort Klamath",
+                            RegionId = 1,
                             Type = "State Trail"
                         },
                         new
@@ -1398,7 +1570,8 @@ namespace StatePark.Migrations
                             ParkId = 170,
                             Camping = false,
                             Name = "South Jetty (South Beach)",
-                            NearestCity = "Newport",
+                            NearestCity = "Klamath Falls",
+                            RegionId = 7,
                             Type = "Beach Access"
                         },
                         new
@@ -1406,7 +1579,8 @@ namespace StatePark.Migrations
                             ParkId = 171,
                             Camping = false,
                             Name = "Blue Mountain Forest State Scenic Corridor",
-                            NearestCity = "La Grande",
+                            NearestCity = "Newport",
+                            RegionId = 2,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -1414,7 +1588,8 @@ namespace StatePark.Migrations
                             ParkId = 172,
                             Camping = false,
                             Name = "Battle Mountain Forest State Scenic Corridor",
-                            NearestCity = "Ukiah",
+                            NearestCity = "La Grande",
+                            RegionId = 2,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -1422,7 +1597,8 @@ namespace StatePark.Migrations
                             ParkId = 173,
                             Camping = false,
                             Name = "Sumpter Valley Dredge State Heritage Area",
-                            NearestCity = "Baker City",
+                            NearestCity = "Ukiah",
+                            RegionId = 2,
                             Type = "Heritage Area"
                         },
                         new
@@ -1430,7 +1606,8 @@ namespace StatePark.Migrations
                             ParkId = 174,
                             Camping = true,
                             Name = "Fall Creek State Recreation Site",
-                            NearestCity = "Springfield",
+                            NearestCity = "Baker City",
+                            RegionId = 6,
                             Type = "Recreation Site"
                         },
                         new
@@ -1439,6 +1616,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Lowell State Recreation Site",
                             NearestCity = "Springfield",
+                            RegionId = 6,
                             Type = "Recreation Site"
                         },
                         new
@@ -1447,6 +1625,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Jasper State Recreation Site",
                             NearestCity = "Springfield",
+                            RegionId = 6,
                             Type = "Recreation Site"
                         },
                         new
@@ -1455,6 +1634,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Dexter State Recreation Site",
                             NearestCity = "Springfield",
+                            RegionId = 6,
                             Type = "Recreation Site"
                         },
                         new
@@ -1462,7 +1642,8 @@ namespace StatePark.Migrations
                             ParkId = 178,
                             Camping = false,
                             Name = "Munson Creek Falls State Natural Site",
-                            NearestCity = "Tillamook",
+                            NearestCity = "Springfield",
+                            RegionId = 8,
                             Type = "Natural Site"
                         },
                         new
@@ -1470,7 +1651,8 @@ namespace StatePark.Migrations
                             ParkId = 179,
                             Camping = false,
                             Name = "Willamette Stone State Heritage Site",
-                            NearestCity = "Portland",
+                            NearestCity = "Tillamook",
+                            RegionId = 4,
                             Type = "Heritage Site"
                         },
                         new
@@ -1478,7 +1660,8 @@ namespace StatePark.Migrations
                             ParkId = 180,
                             Camping = false,
                             Name = "Umpqua State Scenic Corridor",
-                            NearestCity = "Reedsport",
+                            NearestCity = "Portland",
+                            RegionId = 5,
                             Type = "Scenic Corridor"
                         },
                         new
@@ -1486,7 +1669,8 @@ namespace StatePark.Migrations
                             ParkId = 181,
                             Camping = false,
                             Name = "Clay Myers State Natural Area at Whalen Island",
-                            NearestCity = "Pacific City",
+                            NearestCity = "Reedsport",
+                            RegionId = 8,
                             Type = "Natural Area"
                         },
                         new
@@ -1494,7 +1678,8 @@ namespace StatePark.Migrations
                             ParkId = 182,
                             Camping = false,
                             Name = "Fort Rock Cave (Near Fort Rock State Natural Area)",
-                            NearestCity = "Fort Rock",
+                            NearestCity = "Pacific City",
+                            RegionId = 3,
                             Type = "National Historic Landmark"
                         },
                         new
@@ -1502,7 +1687,8 @@ namespace StatePark.Migrations
                             ParkId = 183,
                             Camping = true,
                             Name = "Government Island State Recreation Area",
-                            NearestCity = "Portland",
+                            NearestCity = "Fort Rock",
+                            RegionId = 4,
                             Type = "Recreation Area"
                         },
                         new
@@ -1510,7 +1696,8 @@ namespace StatePark.Migrations
                             ParkId = 184,
                             Camping = false,
                             Name = "Sunset Beach State Recreation Site",
-                            NearestCity = "Astoria",
+                            NearestCity = "Portland",
+                            RegionId = 8,
                             Type = "Recreation Site"
                         },
                         new
@@ -1518,7 +1705,8 @@ namespace StatePark.Migrations
                             ParkId = 185,
                             Camping = false,
                             Name = "Whale Watching Center",
-                            NearestCity = "Depoe Bay",
+                            NearestCity = "Astoria",
+                            RegionId = 7,
                             Type = "Guided Ocean Viewpoint"
                         },
                         new
@@ -1527,6 +1715,7 @@ namespace StatePark.Migrations
                             Camping = false,
                             Name = "Rocky Creek State Scenic Viewpoint",
                             NearestCity = "Depoe Bay",
+                            RegionId = 7,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -1534,7 +1723,8 @@ namespace StatePark.Migrations
                             ParkId = 187,
                             Camping = false,
                             Name = "Fort Yamhill State Heritage Area",
-                            NearestCity = "Grand Ronde",
+                            NearestCity = "Depoe Bay",
+                            RegionId = 6,
                             Type = "Heritage Area"
                         },
                         new
@@ -1542,7 +1732,8 @@ namespace StatePark.Migrations
                             ParkId = 188,
                             Camping = true,
                             Name = "L. L. 'Stub' Stewart State Park",
-                            NearestCity = "Vernonia",
+                            NearestCity = "Grand Ronde",
+                            RegionId = 4,
                             Type = "State Park"
                         },
                         new
@@ -1550,7 +1741,8 @@ namespace StatePark.Migrations
                             ParkId = 189,
                             Camping = false,
                             Name = "Thompson's Mills State Heritage Site",
-                            NearestCity = "Shedd",
+                            NearestCity = "Vernonia",
+                            RegionId = 6,
                             Type = "Heritage Site"
                         },
                         new
@@ -1558,7 +1750,8 @@ namespace StatePark.Migrations
                             ParkId = 190,
                             Camping = false,
                             Name = "State Capitol State Park",
-                            NearestCity = "Salem",
+                            NearestCity = "Shedd",
+                            RegionId = 6,
                             Type = "State Park"
                         },
                         new
@@ -1566,7 +1759,8 @@ namespace StatePark.Migrations
                             ParkId = 191,
                             Camping = false,
                             Name = "Arizona Beach State Recreation Site",
-                            NearestCity = "Port Orford",
+                            NearestCity = "Salem",
+                            RegionId = 5,
                             Type = "Recreation Site"
                         },
                         new
@@ -1574,7 +1768,8 @@ namespace StatePark.Migrations
                             ParkId = 192,
                             Camping = false,
                             Name = "Bates State Park",
-                            NearestCity = "Prairie City",
+                            NearestCity = "Port Orford",
+                            RegionId = 2,
                             Type = "State Park"
                         },
                         new
@@ -1582,7 +1777,8 @@ namespace StatePark.Migrations
                             ParkId = 193,
                             Camping = false,
                             Name = "Ochoco State Scenic Viewpoint",
-                            NearestCity = "Prineville",
+                            NearestCity = "Prairie City",
+                            RegionId = 3,
                             Type = "Scenic Viewpoint"
                         },
                         new
@@ -1590,7 +1786,8 @@ namespace StatePark.Migrations
                             ParkId = 194,
                             Camping = false,
                             Name = "Dyer State Wayside",
-                            NearestCity = "Condon",
+                            NearestCity = "Prineville",
+                            RegionId = 2,
                             Type = "Wayside"
                         },
                         new
@@ -1598,7 +1795,8 @@ namespace StatePark.Migrations
                             ParkId = 195,
                             Camping = false,
                             Name = "Pete French Round Barn State Heritage Site",
-                            NearestCity = "New Princeton",
+                            NearestCity = "Condon",
+                            RegionId = 2,
                             Type = "Heritage Site"
                         },
                         new
@@ -1606,1213 +1804,18 @@ namespace StatePark.Migrations
                             ParkId = 196,
                             Camping = false,
                             Name = "Cottonwood Canyon State Park",
-                            NearestCity = "Moro",
+                            NearestCity = "New Princeton",
+                            RegionId = 3,
                             Type = "State Park"
-                        });
-                });
-
-            modelBuilder.Entity("StatePark.Models.ParkRegion", b =>
-                {
-                    b.Property<int>("ParkRegionId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("ParkId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RegionId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ParkRegionId");
-
-                    b.HasIndex("ParkId");
-
-                    b.HasIndex("RegionId");
-
-                    b.ToTable("ParkRegions");
-
-                    b.HasData(
-                        new
-                        {
-                            ParkRegionId = 1,
-                            ParkId = 1,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 2,
-                            ParkId = 22,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 3,
-                            ParkId = 23,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 4,
-                            ParkId = 24,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 5,
-                            ParkId = 38,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 6,
-                            ParkId = 39,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 7,
-                            ParkId = 71,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 8,
-                            ParkId = 72,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 9,
-                            ParkId = 73,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 10,
-                            ParkId = 74,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 11,
-                            ParkId = 75,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 12,
-                            ParkId = 138,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 13,
-                            ParkId = 167,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 14,
-                            ParkId = 168,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 15,
-                            ParkId = 169,
-                            RegionId = 1
-                        },
-                        new
-                        {
-                            ParkRegionId = 16,
-                            ParkId = 2,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 17,
-                            ParkId = 3,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 18,
-                            ParkId = 4,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 19,
-                            ParkId = 5,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 20,
-                            ParkId = 6,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 21,
-                            ParkId = 7,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 22,
-                            ParkId = 8,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 23,
-                            ParkId = 9,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 24,
-                            ParkId = 10,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 25,
-                            ParkId = 11,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 26,
-                            ParkId = 12,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 27,
-                            ParkId = 13,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 28,
-                            ParkId = 14,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 29,
-                            ParkId = 15,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 30,
-                            ParkId = 16,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 31,
-                            ParkId = 17,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 32,
-                            ParkId = 18,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 33,
-                            ParkId = 19,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 34,
-                            ParkId = 20,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 35,
-                            ParkId = 21,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 36,
-                            ParkId = 171,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 37,
-                            ParkId = 172,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 38,
-                            ParkId = 173,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 39,
-                            ParkId = 192,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 40,
-                            ParkId = 194,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 41,
-                            ParkId = 195,
-                            RegionId = 2
-                        },
-                        new
-                        {
-                            ParkRegionId = 42,
-                            ParkId = 25,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 43,
-                            ParkId = 26,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 44,
-                            ParkId = 27,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 45,
-                            ParkId = 31,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 46,
-                            ParkId = 32,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 47,
-                            ParkId = 33,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 48,
-                            ParkId = 34,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 49,
-                            ParkId = 35,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 50,
-                            ParkId = 36,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 51,
-                            ParkId = 37,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 52,
-                            ParkId = 182,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 53,
-                            ParkId = 193,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 54,
-                            ParkId = 196,
-                            RegionId = 3
-                        },
-                        new
-                        {
-                            ParkRegionId = 55,
-                            ParkId = 28,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 56,
-                            ParkId = 29,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 57,
-                            ParkId = 30,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 58,
-                            ParkId = 76,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 59,
-                            ParkId = 77,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 60,
-                            ParkId = 101,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 61,
-                            ParkId = 102,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 62,
-                            ParkId = 103,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 63,
-                            ParkId = 104,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 64,
-                            ParkId = 105,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 65,
-                            ParkId = 106,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 66,
-                            ParkId = 107,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 67,
-                            ParkId = 108,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 68,
-                            ParkId = 109,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 69,
-                            ParkId = 110,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 70,
-                            ParkId = 111,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 71,
-                            ParkId = 112,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 72,
-                            ParkId = 113,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 73,
-                            ParkId = 114,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 74,
-                            ParkId = 115,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 75,
-                            ParkId = 116,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 76,
-                            ParkId = 117,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 77,
-                            ParkId = 118,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 78,
-                            ParkId = 119,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 79,
-                            ParkId = 120,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 80,
-                            ParkId = 121,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 81,
-                            ParkId = 122,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 82,
-                            ParkId = 123,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 83,
-                            ParkId = 124,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 84,
-                            ParkId = 125,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 85,
-                            ParkId = 126,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 86,
-                            ParkId = 127,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 87,
-                            ParkId = 179,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 88,
-                            ParkId = 183,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 89,
-                            ParkId = 188,
-                            RegionId = 4
-                        },
-                        new
-                        {
-                            ParkRegionId = 90,
-                            ParkId = 40,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 91,
-                            ParkId = 41,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 92,
-                            ParkId = 42,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 93,
-                            ParkId = 43,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 94,
-                            ParkId = 44,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 95,
-                            ParkId = 45,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 96,
-                            ParkId = 46,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 97,
-                            ParkId = 47,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 98,
-                            ParkId = 48,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 99,
-                            ParkId = 49,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 100,
-                            ParkId = 50,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 101,
-                            ParkId = 51,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 102,
-                            ParkId = 52,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 103,
-                            ParkId = 53,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 104,
-                            ParkId = 54,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 105,
-                            ParkId = 55,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 106,
-                            ParkId = 56,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 107,
-                            ParkId = 57,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 108,
-                            ParkId = 58,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 109,
-                            ParkId = 59,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 110,
-                            ParkId = 66,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 111,
-                            ParkId = 67,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 112,
-                            ParkId = 68,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 113,
-                            ParkId = 69,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 114,
-                            ParkId = 70,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 115,
-                            ParkId = 180,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 116,
-                            ParkId = 191,
-                            RegionId = 5
-                        },
-                        new
-                        {
-                            ParkRegionId = 117,
-                            ParkId = 60,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 118,
-                            ParkId = 61,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 119,
-                            ParkId = 62,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 120,
-                            ParkId = 63,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 121,
-                            ParkId = 64,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 122,
-                            ParkId = 65,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 123,
-                            ParkId = 78,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 124,
-                            ParkId = 96,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 125,
-                            ParkId = 97,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 126,
-                            ParkId = 98,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 127,
-                            ParkId = 99,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 128,
-                            ParkId = 100,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 129,
-                            ParkId = 152,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 130,
-                            ParkId = 153,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 131,
-                            ParkId = 174,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 132,
-                            ParkId = 175,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 133,
-                            ParkId = 176,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 134,
-                            ParkId = 177,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 135,
-                            ParkId = 187,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 136,
-                            ParkId = 189,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 137,
-                            ParkId = 190,
-                            RegionId = 6
-                        },
-                        new
-                        {
-                            ParkRegionId = 138,
-                            ParkId = 79,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 139,
-                            ParkId = 80,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 140,
-                            ParkId = 81,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 141,
-                            ParkId = 82,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 142,
-                            ParkId = 83,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 143,
-                            ParkId = 84,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 144,
-                            ParkId = 85,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 145,
-                            ParkId = 86,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 146,
-                            ParkId = 87,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 147,
-                            ParkId = 88,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 148,
-                            ParkId = 89,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 149,
-                            ParkId = 90,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 150,
-                            ParkId = 91,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 151,
-                            ParkId = 92,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 152,
-                            ParkId = 93,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 153,
-                            ParkId = 94,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 154,
-                            ParkId = 95,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 155,
-                            ParkId = 145,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 156,
-                            ParkId = 146,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 157,
-                            ParkId = 147,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 158,
-                            ParkId = 148,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 159,
-                            ParkId = 149,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 160,
-                            ParkId = 150,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 161,
-                            ParkId = 151,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 162,
-                            ParkId = 154,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 163,
-                            ParkId = 155,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 164,
-                            ParkId = 158,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 165,
-                            ParkId = 159,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 166,
-                            ParkId = 160,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 167,
-                            ParkId = 161,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 168,
-                            ParkId = 164,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 169,
-                            ParkId = 166,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 170,
-                            ParkId = 170,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 171,
-                            ParkId = 185,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 172,
-                            ParkId = 186,
-                            RegionId = 7
-                        },
-                        new
-                        {
-                            ParkRegionId = 173,
-                            ParkId = 128,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 174,
-                            ParkId = 129,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 175,
-                            ParkId = 130,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 176,
-                            ParkId = 131,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 177,
-                            ParkId = 132,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 178,
-                            ParkId = 133,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 179,
-                            ParkId = 134,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 180,
-                            ParkId = 135,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 181,
-                            ParkId = 136,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 182,
-                            ParkId = 137,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 183,
-                            ParkId = 139,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 184,
-                            ParkId = 140,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 185,
-                            ParkId = 141,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 186,
-                            ParkId = 142,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 187,
-                            ParkId = 143,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 188,
-                            ParkId = 144,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 189,
-                            ParkId = 156,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 190,
-                            ParkId = 157,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 191,
-                            ParkId = 162,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 192,
-                            ParkId = 163,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 193,
-                            ParkId = 165,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 194,
-                            ParkId = 178,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 195,
-                            ParkId = 181,
-                            RegionId = 8
-                        },
-                        new
-                        {
-                            ParkRegionId = 196,
-                            ParkId = 184,
-                            RegionId = 8
                         },
                         new
                         {
-                            ParkRegionId = 197,
                             ParkId = 197,
-                            RegionId = 8
+                            Camping = false,
+                            Name = "Sitka Sedge State Natural Area",
+                            NearestCity = "Moro",
+                            RegionId = 8,
+                            Type = "Natural Site"
                         });
                 });
 
@@ -2870,35 +1873,6 @@ namespace StatePark.Migrations
                             RegionId = 8,
                             Name = "North Coast"
                         });
-                });
-
-            modelBuilder.Entity("StatePark.Models.ParkRegion", b =>
-                {
-                    b.HasOne("StatePark.Models.Park", "Park")
-                        .WithMany("JoinEntities")
-                        .HasForeignKey("ParkId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("StatePark.Models.Region", "Region")
-                        .WithMany("JoinEntities")
-                        .HasForeignKey("RegionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Park");
-
-                    b.Navigation("Region");
-                });
-
-            modelBuilder.Entity("StatePark.Models.Park", b =>
-                {
-                    b.Navigation("JoinEntities");
-                });
-
-            modelBuilder.Entity("StatePark.Models.Region", b =>
-                {
-                    b.Navigation("JoinEntities");
                 });
 #pragma warning restore 612, 618
         }

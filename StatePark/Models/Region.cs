@@ -7,12 +7,9 @@ namespace StatePark.Models
   {
     public Region()
     {
-      this.JoinEntities = new HashSet<ParkRegion>();
     }
     public int RegionId { get; set; }
     public string Name { get; set; }
-
-    public virtual ICollection<ParkRegion> JoinEntities { get; }
 
   }
 }
